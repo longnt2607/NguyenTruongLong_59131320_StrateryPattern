@@ -50,11 +50,13 @@ public class Main {
         // sap xep danh sach theo ten
         System.out.println("----- Sap xep sanh sach sinh vien theo TEN -----");
         ql.setSoSanh(theoTen);
+        ql.sapXep();
         ql.inDS();
         
         // sap xep danh sach theo diem
         System.out.println("----- Sap xep sanh sach sinh vien theo DIEM TRUNG BINH -----");
         ql.setSoSanh(theoDiem);
+        ql.sapXep();
         ql.inDS();
     }
 }
