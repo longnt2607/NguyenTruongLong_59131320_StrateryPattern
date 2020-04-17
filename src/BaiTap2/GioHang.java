@@ -13,10 +13,39 @@ import java.util.ArrayList;
  */
 public class GioHang {
     
-    private IThanhToan hinhThucTT;
+    private IThanhToan gioHang;
     private ArrayList<HangHoa> list = new ArrayList<>(); // danh sach cac hang hoa
+
+    public GioHang() {
+    }
+
+    public GioHang(IThanhToan gioHang) {
+        this.gioHang = gioHang;
+    }
+
+    public void themHangHoa(HangHoa hang) {
+        list.add(hang);
+    }
     
+    public void inHoaDon() {
+        for (HangHoa x : list) {
+            x.inThongTin();
+        }
+    }
+            
     public double thanhToan() {
-        
+        double s = 0;
+        for (HangHoa x : list) {
+            s += x.getGia();
+        }
+        return gioHang.thanhToan((int)s);
+    }
+    
+    public double tongTienHang() {
+        double s = 0;
+        for (HangHoa x : list) {
+            s += x.getGia();
+        }
+        return s;
     }
 }
